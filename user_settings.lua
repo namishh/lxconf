@@ -49,18 +49,19 @@ return {
       ["minimap"] = {
         ["avoid_small_docs_len"] = 0,
         ["caret_color"] = {
-          [1] = 141,
-          [2] = 143,
-          [3] = 148,
+          [1] = 96,
+          [2] = 97,
+          [3] = 101,
           [4] = 255
         },
         ["selection_color"] = {
-          [1] = 86,
-          [2] = 88,
-          [3] = 91,
-          [4] = 255
+          [1] = 52,
+          [2] = 53,
+          [3] = 57,
+          [4] = 85
         },
-        ["tab_width"] = 2
+        ["tab_width"] = 2,
+        ["width"] = 100
       },
       ["search_ui"] = {
         ["position"] = "right",

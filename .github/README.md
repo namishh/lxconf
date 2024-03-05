@@ -1,3 +1,4 @@
+
 ### my lite-xl config
 
 ![litelx](https://i.imgur.com/hgAHBzh.png)
