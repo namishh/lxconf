@@ -1,0 +1,16 @@
+{
+  "addons": [
+    {
+      "id": "treeview-extender",
+      "name": "Treeview Extender",
+      "description": "This plugin add file operation menu to Lite XL's treeview.",
+      "version": "1.0.1",
+      "mod_version": "3",
+      "tags": [
+        "treeview",
+        "file",
+        "menu"
+      ]
+    }
+  ]
+}
