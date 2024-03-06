@@ -1,4 +1,4 @@
-;; Misc
+1;; Misc
 
 [
   (line_comment)

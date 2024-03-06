@@ -1,6 +1,9 @@
 local core = require "core"
 local keymap = require "core.keymap"
 local config = require "core.config"
+local style = require 'core.style'
+local StatusView = require 'core.statusview'
+
 
 core.reload_module("colors.x")
 
@@ -14,6 +17,23 @@ fontconfig.use_blocking {
 keymap.add_direct {
   ['ctrl+shift+r'] = 'core:restart'
 }
+
+local bigCodeFont = style.code_font:copy(16 * SCALE)
+if not core.status_view:get_item 'icon:flake' then
+	core.status_view:add_item {
+		name = 'icon:flake',
+		alignment = StatusView.Item.RIGHT,
+		get_item = function()
+			return {
+				style.color12, bigCodeFont, ' '
+			}
+		end,
+		tooltip = 'crystal',
+		separator = StatusView.separator2
+	}
+end
+core.status_view:hide_items {'doc:line-ending', 'command:files', 'status:scm'}
+core.status_view:move_item('doc:position', 3, StatusView.Item.RIGHT)
 
 config.tab_type = 'hard'
 config.indent_size = 2

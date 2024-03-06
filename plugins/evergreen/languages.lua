@@ -22,6 +22,10 @@ M.extensionMappings = makeTbl {
 	'go',
 	'lua',
 	['jsx,js,tsx,ts'] = 'javascript',
+	'scss',
+	'yuck',
+	['py'] = 'python',
+	'prisma',
 	['jl'] = 'julia',
 	['rs'] = 'rust',
 	'zig'
@@ -44,7 +48,9 @@ M.exts = {
 	julia = 'https://github.com/tree-sitter/tree-sitter-julia',
 	lua = 'https://github.com/MunifTanjim/tree-sitter-lua',
 	rust = 'https://github.com/tree-sitter/tree-sitter-rust',
-	zig = 'https://github.com/maxxnino/tree-sitter-zig'
+	zig = 'https://github.com/maxxnino/tree-sitter-zig',
+	prisma = 'https://github.com/victorhqc/tree-sitter-prisma',
+	python = 'https://github.com/tree-sitter/py-tree-sitter',
 }
 
 M.installed = {}

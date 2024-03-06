@@ -2,6 +2,11 @@ return {
   ["config"] = {
     ["animate_drag_scroll"] = false,
     ["animation_rate"] = 0.5,
+    ["custom_keybindings"] = {
+      ["code_plus:complete_quotation_marks"] = {
+        [1] = "ctrl+shift+2"
+      }
+    },
     ["disabled_transitions"] = {
       ["scroll"] = false
     },
