@@ -2,11 +2,11 @@ local core = require "core"
 local keymap = require "core.keymap"
 local config = require "core.config"
 
-core.reload_module("colors.onedark")
+core.reload_module("colors.x")
 
 local fontconfig = require "plugins.fontconfig"
 
-fontconfig.use {
+fontconfig.use_blocking {
   font = { name = "Product Sans", size = 14 * SCALE },
   code_font = { name = "Iosevka Nerd Font", size = 14 * SCALE }
 }
@@ -22,7 +22,7 @@ config.plugins.toolbarview = false
 config.plugins.lsp.stop_unneeded_servers = false
 local lspconfig = require "plugins.lsp.config"
 
-local servers = { "html", "pyright", "tsserver", "cssls", "rnix", "emmetls" }
+local servers = { "html", "pyright", "tsserver", "cssls", "rnix" }
 
 for _, k in ipairs(servers) do
   lspconfig[k].setup()

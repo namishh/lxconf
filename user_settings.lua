@@ -1,7 +1,7 @@
 return {
   ["config"] = {
     ["animate_drag_scroll"] = false,
-    ["animation_rate"] = 0.6,
+    ["animation_rate"] = 0.5,
     ["disabled_transitions"] = {
       ["scroll"] = false
     },
@@ -24,6 +24,7 @@ return {
         ["underline"] = false
       }
     },
+    ["fps"] = 144,
     ["message_timeout"] = 3,
     ["plugins"] = {
       ["code_plus"] = {
@@ -49,15 +50,15 @@ return {
       ["minimap"] = {
         ["avoid_small_docs_len"] = 0,
         ["caret_color"] = {
-          [1] = 96,
-          [2] = 97,
-          [3] = 101,
+          [1] = 27,
+          [2] = 27,
+          [3] = 29,
           [4] = 255
         },
         ["selection_color"] = {
-          [1] = 52,
-          [2] = 53,
-          [3] = 57,
+          [1] = 14,
+          [2] = 14,
+          [3] = 15,
           [4] = 85
         },
         ["tab_width"] = 2,
