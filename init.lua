@@ -17,7 +17,6 @@ fontconfig.use_blocking {
 keymap.add_direct {
   ['ctrl+shift+r'] = 'core:restart'
 }
-
 local bigCodeFont = style.code_font:copy(16 * SCALE)
 if not core.status_view:get_item 'icon:flake' then
 	core.status_view:add_item {
@@ -47,6 +46,8 @@ local servers = { "html", "pyright", "tsserver", "cssls", "rnix" }
 for _, k in ipairs(servers) do
   lspconfig[k].setup()
 end
+
+
 
 
 lspconfig.sumneko_lua.setup {

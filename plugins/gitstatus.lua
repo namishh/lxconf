@@ -29,9 +29,9 @@ config.plugins.gitstatus = common.merge({
   }
 }, config.plugins.gitstatus)
 
-style.gitstatus_addition = {common.color "#587c0c"}
-style.gitstatus_modification = {common.color "#0c7d9d"}
-style.gitstatus_deletion = {common.color "#94151b"}
+style.gitstatus_addition = { common.color "#587c0c" }
+style.gitstatus_modification = { common.color "#0c7d9d" }
+style.gitstatus_deletion = { common.color "#94151b" }
 
 local scan_rate = config.project_scan_rate or 5
 local cached_color_for_item = {}
@@ -80,19 +80,19 @@ core.add_thread(function()
   while true do
     if system.get_file_info(".git") then
       -- get branch name
-      git.branch = exec({"git", "rev-parse", "--abbrev-ref", "HEAD"}):match("[^\n]*")
+      git.branch = exec({ "git", "rev-parse", "--abbrev-ref", "HEAD" }):match("[^\n]*")
 
       local inserts = 0
       local deletes = 0
 
       -- get diff
-      local diff = exec({"git", "diff", "--numstat"})
+      local diff = exec({ "git", "diff", "--numstat" })
       if
-        config.plugins.gitstatus.recurse_submodules
-        and
-        system.get_file_info(".gitmodules")
+          config.plugins.gitstatus.recurse_submodules
+          and
+          system.get_file_info(".gitmodules")
       then
-        local diff2 = exec({"git", "submodule", "foreach", "git diff --numstat"})
+        local diff2 = exec({ "git", "submodule", "foreach", "git diff --numstat" })
         diff = diff .. diff2
       end
 
@@ -123,7 +123,6 @@ core.add_thread(function()
 
       git.inserts = inserts
       git.deletes = deletes
-
     else
       git.branch = nil
     end
@@ -135,7 +134,7 @@ end)
 
 core.status_view:add_item({
   name = "status:git",
-  alignment = StatusView.Item.RIGHT,
+  alignment = StatusView.Item.LEFT,
   get_item = function()
     if not git.branch then
       return {}
