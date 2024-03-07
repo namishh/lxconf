@@ -48,8 +48,6 @@ for _, k in ipairs(servers) do
 end
 
 
-
-
 lspconfig.sumneko_lua.setup {
   settings = {
     Lua = {

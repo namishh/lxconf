@@ -1,7 +1,7 @@
 
 ### my lite-xl config
 
-![litelx](https://i.imgur.com/olTDZzy.png)
+![litelx](https://i.imgur.com/4KMuvpv.png)
 
 + create `colors/x.lua`
 
